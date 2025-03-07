@@ -1,0 +1,579 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CLIX HOUSE - Digital Craft Studio</title>
+    <meta name="description" content="CLIX HOUSE builds digital presence through constraint-based design and kinetic typography, creating experiences that elevate brands with clarity, purpose, and beauty.">
+    
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=Inconsolata:wght@300;400;500;600&display=swap" rel="stylesheet">
+    
+    <!-- Stylesheets -->
+    <link rel="stylesheet" href="assets/css/main.css">
+    <link rel="stylesheet" href="assets/css/header.css">
+    <link rel="stylesheet" href="assets/css/footer.css">
+    <link rel="stylesheet" href="assets/css/animations.css">
+    
+    <!-- Page-specific CSS -->
+    <link rel="stylesheet" href="assets/css/home.css">
+    
+    <!-- Favicon -->
+    <link rel="icon" href="assets/images/favicon.ico">
+</head>
+<body>
+    <!-- Atmospheric Effects -->
+    <div class="paper-texture"></div>
+    <div class="vignette"></div>
+    <div class="paper-edge paper-edge-top"></div>
+    <div class="paper-edge paper-edge-bottom"></div>
+    <div class="paper-edge paper-edge-left"></div>
+    <div class="paper-edge paper-edge-right"></div>
+
+    <!-- Custom Cursor -->
+    <div class="custom-cursor"></div>
+    <div class="cursor-follower"></div>
+
+    <!-- Header -->
+    <header class="header">
+        <div class="container">
+            <div class="header-content">
+                <a href="/" class="logo">CLIX HOUSE</a>
+                <div class="flex items-center">
+                    <nav class="nav-desktop">
+                        <a href="/services" class="nav-link">
+                            <span class="en-content">Services</span>
+                            <span class="es-content">Servicios</span>
+                        </a>
+                        <a href="/manifesto.html" class="nav-link">
+                            <span class="en-content">Manifesto</span>
+                            <span class="es-content">Manifiesto</span>
+                        </a>
+                        <a href="/work" class="nav-link">
+                            <span class="en-content">Work</span>
+                            <span class="es-content">Proyectos</span>
+                        </a>
+                        <a href="/about" class="nav-link">
+                            <span class="en-content">About</span>
+                            <span class="es-content">Sobre Nosotros</span>
+                        </a>
+                        <a href="/contact.html" class="nav-link">
+                            <span class="en-content">Contact</span>
+                            <span class="es-content">Contacto</span>
+                        </a>
+                    </nav>
+                    <div class="language-toggle">
+                        <button class="language-btn active" data-lang="en">EN</button>
+                        <button class="language-btn" data-lang="es">ES</button>
+                        <div class="language-indicator"></div>
+                    </div>
+                    <button class="mode-toggle" aria-label="Toggle dark mode">
+                        <svg class="mode-icon mode-icon-sun" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <circle cx="12" cy="12" r="5"></circle>
+                            <line x1="12" y1="1" x2="12" y2="3"></line>
+                            <line x1="12" y1="21" x2="12" y2="23"></line>
+                            <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+                            <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+                            <line x1="1" y1="12" x2="3" y2="12"></line>
+                            <line x1="21" y1="12" x2="23" y2="12"></line>
+                            <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+                            <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+                        </svg>
+                        <svg class="mode-icon mode-icon-moon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+                        </svg>
+                    </button>
+                    <div class="nav-toggle">
+                        <div class="nav-toggle-line"></div>
+                        <div class="nav-toggle-line"></div>
+                        <div class="nav-toggle-line"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Mobile Navigation -->
+    <div class="nav-mobile">
+        <div class="container">
+            <div class="nav-mobile-links">
+                <a href="/services" class="nav-mobile-link">
+                    <span class="en-content">Services</span>
+                    <span class="es-content">Servicios</span>
+                </a>
+                <a href="/manifesto.html" class="nav-mobile-link">
+                    <span class="en-content">Manifesto</span>
+                    <span class="es-content">Manifiesto</span>
+                </a>
+                <a href="/work" class="nav-mobile-link">
+                    <span class="en-content">Work</span>
+                    <span class="es-content">Proyectos</span>
+                </a>
+                <a href="/about" class="nav-mobile-link">
+                    <span class="en-content">About</span>
+                    <span class="es-content">Sobre Nosotros</span>
+                </a>
+                <a href="/contact.html" class="nav-mobile-link">
+                    <span class="en-content">Contact</span>
+                    <span class="es-content">Contacto</span>
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Main Content -->
+    <div class="page-content">
+        <main>
+            <!-- Hero Section -->
+            <section class="hero" id="hero">
+                <div class="hero-kineticWrapper">
+                    <div class="hero-kineticType">DIGITAL PRESENCE DIGITAL PRESENCE DIGITAL PRESENCE</div>
+                </div>
+                <div class="container">
+                    <div class="hero-content">
+                        <h1 class="hero-tagline">
+                            <span class="hero-tagline-line">
+                                <span class="hero-tagline-text en-content">We build</span>
+                                <span class="hero-tagline-text es-content">Creamos tu</span>
+                            </span>
+                            <span class="hero-tagline-line">
+                                <span class="hero-tagline-text en-content">digital</span>
+                                <span class="hero-tagline-text es-content">mundo</span>
+                            </span>
+                            <span class="hero-tagline-line">
+                                <span class="hero-tagline-text en-content">presence.</span>
+                                <span class="hero-tagline-text es-content">digital.</span>
+                            </span>
+                        </h1>
+                        <p class="hero-description">
+                            <span class="en-content">Through constraint-based design and kinetic typography, we create digital experiences that elevate your brand with clarity, purpose, and beauty.</span>
+                            <span class="es-content">A través del diseño basado en restricciones y la tipografía cinética, creamos experiencias digitales que elevan tu marca con claridad, propósito y belleza.</span>
+                        </p>
+                        <a href="/contact.html" class="hero-button">
+                            <span class="en-content">Let's work together</span>
+                            <span class="es-content">Trabajemos juntos</span>
+                        </a>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Services Section -->
+            <section class="services" id="services">
+                <div class="container">
+                    <h2 class="section-title">
+                        <div class="text-reveal">
+                            <div class="text-reveal-content en-content">Our services</div>
+                            <div class="text-reveal-content es-content">Nuestros servicios</div>
+                        </div>
+                    </h2>
+                    <div class="services-grid">
+                        <div class="service-card stagger-item" data-delay="0">
+                            <div class="service-number">01</div>
+                            <h3 class="service-title">
+                                <span class="en-content">Custom Websites</span>
+                                <span class="es-content">Sitios Web Personalizados</span>
+                            </h3>
+                            <p class="service-description">
+                                <span class="en-content">We craft digital experiences that embody your brand's voice, focusing on typography, whitespace, and purposeful interactions.</span>
+                                <span class="es-content">Creamos experiencias digitales que encarnan la voz de tu marca, centrándonos en la tipografía, el espacio en blanco y las interacciones con propósito.</span>
+                            </p>
+                            <a href="/services/custom-websites.html" class="service-link">
+                                <span class="en-content">Learn more</span>
+                                <span class="es-content">Saber más</span>
+                            </a>
+                        </div>
+                        <div class="service-card stagger-item" data-delay="100">
+                            <div class="service-number">02</div>
+                            <h3 class="service-title">
+                                <span class="en-content">Professional Photography</span>
+                                <span class="es-content">Fotografía Profesional</span>
+                            </h3>
+                            <p class="service-description">
+                                <span class="en-content">Our sophisticated black and white photography creates striking visual narratives that elevate your brand story with timeless elegance.</span>
+                                <span class="es-content">Nuestra sofisticada fotografía en blanco y negro crea narrativas visuales impactantes que elevan la historia de tu marca con elegancia atemporal.</span>
+                            </p>
+                            <a href="/services/photography.html" class="service-link">
+                                <span class="en-content">Learn more</span>
+                                <span class="es-content">Saber más</span>
+                            </a>
+                        </div>
+                        <div class="service-card stagger-item" data-delay="200">
+                            <div class="service-number">03</div>
+                            <h3 class="service-title">
+                                <span class="en-content">Content Creation</span>
+                                <span class="es-content">Creación de Contenido</span>
+                            </h3>
+                            <p class="service-description">
+                                <span class="en-content">We develop thoughtful written and visual content that communicates with clarity and precision, celebrating constraints as a catalyst for creativity.</span>
+                                <span class="es-content">Desarrollamos contenido escrito y visual reflexivo que comunica con claridad y precisión, celebrando las restricciones como catalizador de la creatividad.</span>
+                            </p>
+                            <a href="/services/content-creation.html" class="service-link">
+                                <span class="en-content">Learn more</span>
+                                <span class="es-content">Saber más</span>
+                            </a>
+                        </div>
+                        <div class="service-card stagger-item" data-delay="300">
+                            <div class="service-number">04</div>
+                            <h3 class="service-title">
+                                <span class="en-content">Social Media</span>
+                                <span class="es-content">Redes Sociales</span>
+                            </h3>
+                            <p class="service-description">
+                                <span class="en-content">Our distinctive social strategy uses constraint-based design to help your content stand out in crowded feeds through typographic expression and focused messaging.</span>
+                                <span class="es-content">Nuestra distintiva estrategia social utiliza el diseño basado en restricciones para ayudar a que tu contenido destaque en feeds saturados a través de la expresión tipográfica y mensajes enfocados.</span>
+                            </p>
+                            <a href="/services/social-media.html" class="service-link">
+                                <span class="en-content">Learn more</span>
+                                <span class="es-content">Saber más</span>
+                            </a>
+                        </div>
+                        <div class="service-card stagger-item" data-delay="400">
+                            <div class="service-number">05</div>
+                            <h3 class="service-title">
+                                <span class="en-content">Digital Marketing</span>
+                                <span class="es-content">Marketing Digital</span>
+                            </h3>
+                            <p class="service-description">
+                                <span class="en-content">We create focused campaigns that connect your brand with people who value clarity and purpose, using metrics that matter to grow your business.</span>
+                                <span class="es-content">Creamos campañas enfocadas que conectan tu marca con personas que valoran la claridad y el propósito, utilizando métricas que realmente importan para hacer crecer tu negocio.</span>
+                            </p>
+                            <a href="/services/digital-marketing.html" class="service-link">
+                                <span class="en-content">Learn more</span>
+                                <span class="es-content">Saber más</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Manifesto Section -->
+            <section class="manifesto" id="manifesto">
+                <div class="container">
+                    <div class="manifesto-badge">
+                        <span class="en-content">Design with purpose, not decoration</span>
+                        <span class="es-content">Diseño con propósito, no decoración</span>
+                    </div>
+                    <h2 class="section-title">
+                        <div class="text-reveal">
+                            <div class="text-reveal-content en-content">Our manifesto</div>
+                            <div class="text-reveal-content es-content">Nuestro manifiesto</div>
+                        </div>
+                    </h2>
+                    <div class="manifesto-content">
+                        <div class="manifesto-item stagger-item">
+                            <div class="manifesto-number">01</div>
+                            <h3 class="manifesto-principle">
+                                <span class="en-content">Constraints create clarity.</span>
+                                <span class="es-content">Las restricciones crean claridad.</span>
+                            </h3>
+                            <p class="manifesto-description">
+                                <span class="en-content">We embrace limitations as a catalyst for creativity, producing work that communicates with precision and purpose instead of noise.</span>
+                                <span class="es-content">Adoptamos las limitaciones como catalizador de la creatividad, produciendo trabajo que comunica con precisión y propósito en lugar de ruido.</span>
+                            </p>
+                        </div>
+                        <div class="manifesto-item stagger-item">
+                            <div class="manifesto-number">02</div>
+                            <h3 class="manifesto-principle">
+                                <span class="en-content">Typography is visual voice.</span>
+                                <span class="es-content">La tipografía es voz visual.</span>
+                            </h3>
+                            <p class="manifesto-description">
+                                <span class="en-content">The shape, rhythm, and movement of text carries as much meaning as the words themselves, creating distinctive expressions without relying on decoration.</span>
+                                <span class="es-content">La forma, el ritmo y el movimiento del texto llevan tanto significado como las palabras mismas, creando expresiones distintivas sin depender de la decoración.</span>
+                            </p>
+                        </div>
+                        <div class="manifesto-item stagger-item">
+                            <div class="manifesto-number">03</div>
+                            <h3 class="manifesto-principle">
+                                <span class="en-content">Motion reveals meaning.</span>
+                                <span class="es-content">El movimiento revela significado.</span>
+                            </h3>
+                            <p class="manifesto-description">
+                                <span class="en-content">Purposeful animation guides attention and builds connection, revealing information at the perfect moment and creating experiences that engage and delight.</span>
+                                <span class="es-content">La animación con propósito guía la atención y construye conexión, revelando información en el momento perfecto y creando experiencias que involucran y deleitan.</span>
+                            </p>
+                        </div>
+                        <div class="manifesto-item stagger-item">
+                            <div class="manifesto-number">04</div>
+                            <h3 class="manifesto-principle">
+                                <span class="en-content">Bilingualism bridges cultures.</span>
+                                <span class="es-content">El bilingüismo une culturas.</span>
+                            </h3>
+                            <p class="manifesto-description">
+                                <span class="en-content">Our work spans borders, connecting diverse audiences across North America and Baja California through thoughtful design that transcends language differences.</span>
+                                <span class="es-content">Nuestro trabajo atraviesa fronteras, conectando audiencias diversas en América del Norte y Baja California a través de un diseño reflexivo que trasciende las diferencias de idioma.</span>
+                            </p>
+                        </div>
+                    </div>
+                    <div class="text-center mt-48">
+                        <a href="/manifesto.html" class="button">
+                            <span class="en-content">Explore our full manifesto</span>
+                            <span class="es-content">Explora nuestro manifiesto completo</span>
+                        </a>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Works/Projects Section -->
+            <section class="works" id="works">
+                <div class="container">
+                    <h2 class="section-title">
+                        <div class="text-reveal">
+                            <div class="text-reveal-content en-content">Selected work</div>
+                            <div class="text-reveal-content es-content">Trabajos seleccionados</div>
+                        </div>
+                    </h2>
+                    <div class="works-grid">
+                        <div class="work-item work-item-large stagger-item" data-delay="0">
+                            <img src="/api/placeholder/1200/600" alt="Baja Surf Experience project" class="work-image">
+                            <div class="work-overlay">
+                                <div class="work-category">
+                                    <span class="en-content">Website & Identity</span>
+                                    <span class="es-content">Sitio Web e Identidad</span>
+                                </div>
+                                <h3 class="work-title">
+                                    <span class="en-content">Baja Surf Experience</span>
+                                    <span class="es-content">Experiencia de Surf en Baja</span>
+                                </h3>
+                                <p class="work-description">
+                                    <span class="en-content">A bilingual typographic journey that captures the essence of surf culture through constraint-based design.</span>
+                                    <span class="es-content">Un viaje tipográfico bilingüe que captura la esencia de la cultura del surf a través del diseño basado en restricciones.</span>
+                                </p>
+                            </div>
+                            <a href="/work/baja-surf.html" class="work-link-overlay" aria-label="View Baja Surf Experience project"></a>
+                        </div>
+                        <div class="work-item work-item-accent stagger-item" data-delay="100">
+                            <img src="/api/placeholder/800/500" alt="Pacific Coast Winery project" class="work-image">
+                            <div class="work-overlay">
+                                <div class="work-category">
+                                    <span class="en-content">Digital Platform</span>
+                                    <span class="es-content">Plataforma Digital</span>
+                                </div>
+                                <h3 class="work-title">
+                                    <span class="en-content">Pacific Coast Winery</span>
+                                    <span class="es-content">Bodega de la Costa Pacífica</span>
+                                </h3>
+                                <p class="work-description">
+                                    <span class="en-content">A sophisticated online experience focusing on typographic elegance and kinetic storytelling.</span>
+                                    <span class="es-content">Una experiencia en línea sofisticada centrada en la elegancia tipográfica y la narración cinética.</span>
+                                </p>
+                            </div>
+                            <a href="/work/pacific-winery.html" class="work-link-overlay" aria-label="View Pacific Coast Winery project"></a>
+                        </div>
+                        <div class="work-item work-item-standard stagger-item" data-delay="200">
+                            <img src="/api/placeholder/400/500" alt="West Coast Architecture project" class="work-image">
+                            <div class="work-overlay">
+                                <div class="work-category">
+                                    <span class="en-content">Brand System</span>
+                                    <span class="es-content">Sistema de Marca</span>
+                                </div>
+                                <h3 class="work-title">
+                                    <span class="en-content">West Coast Architecture</span>
+                                    <span class="es-content">Arquitectura de la Costa Oeste</span>
+                                </h3>
+                                <p class="work-description">
+                                    <span class="en-content">A minimalist digital showcase reflecting their philosophy of simplicity and purposeful space.</span>
+                                    <span class="es-content">Una muestra digital minimalista que refleja su filosofía de simplicidad y espacio con propósito.</span>
+                                </p>
+                            </div>
+                            <a href="/work/west-coast-architecture.html" class="work-link-overlay" aria-label="View West Coast Architecture project"></a>
+                        </div>
+                        <div class="work-item work-item-standard stagger-item" data-delay="300">
+                            <img src="/api/placeholder/400/500" alt="Border Commerce Initiative project" class="work-image">
+                            <div class="work-overlay">
+                                <div class="work-category">
+                                    <span class="en-content">Digital Campaign</span>
+                                    <span class="es-content">Campaña Digital</span>
+                                </div>
+                                <h3 class="work-title">
+                                    <span class="en-content">Border Commerce Initiative</span>
+                                    <span class="es-content">Iniciativa de Comercio Fronterizo</span>
+                                </h3>
+                                <p class="work-description">
+                                    <span class="en-content">A bilingual platform connecting businesses across borders with a unified design language.</span>
+                                    <span class="es-content">Una plataforma bilingüe que conecta empresas a través de fronteras con un lenguaje de diseño unificado.</span>
+                                </p>
+                            </div>
+                            <a href="/work/border-commerce.html" class="work-link-overlay" aria-label="View Border Commerce Initiative project"></a>
+                        </div>
+                        <div class="work-item work-item-accent stagger-item" data-delay="400">
+                            <img src="/api/placeholder/800/500" alt="Coastal Artisan Market project" class="work-image">
+                            <div class="work-overlay">
+                                <div class="work-category">
+                                    <span class="en-content">Social Media Strategy</span>
+                                    <span class="es-content">Estrategia de Redes Sociales</span>
+                                </div>
+                                <h3 class="work-title">
+                                    <span class="en-content">Coastal Artisan Market</span>
+                                    <span class="es-content">Mercado Artesanal Costero</span>
+                                </h3>
+                                <p class="work-description">
+                                    <span class="en-content">A typography-forward social presence that stands out through constraint-based design.</span>
+                                    <span class="es-content">Una presencia social orientada a la tipografía que destaca a través del diseño basado en restricciones.</span>
+                                </p>
+                            </div>
+                            <a href="/work/coastal-artisan.html" class="work-link-overlay" aria-label="View Coastal Artisan Market project"></a>
+                        </div>
+                    </div>
+                    <div class="text-center mt-48">
+                        <a href="/work" class="button">
+                            <span class="en-content">View all work</span>
+                            <span class="es-content">Ver todos los proyectos</span>
+                        </a>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Contact CTA Section -->
+            <section class="contact-cta">
+                <div class="container">
+                    <div class="contact-cta-content">
+                        <h2 class="contact-cta-title serif">
+                            <span class="en-content">Ready to elevate your digital presence?</span>
+                            <span class="es-content">¿Listo para elevar tu presencia digital?</span>
+                        </h2>
+                        <p class="contact-cta-text">
+                            <span class="en-content">Let's create something together that embodies clarity, purpose, and timeless design.</span>
+                            <span class="es-content">Creemos algo juntos que encarne claridad, propósito y diseño atemporal.</span>
+                        </p>
+                        <a href="/contact.html" class="button">
+                            <span class="en-content">Start a conversation</span>
+                            <span class="es-content">Iniciar una conversación</span>
+                        </a>
+                    </div>
+                </div>
+            </section>
+        </main>
+
+        <!-- Footer -->
+        <footer class="footer">
+            <div class="container">
+                <div class="footer-grid">
+                    <div>
+                        <div class="footer-logo">CLIX HOUSE</div>
+                        <div class="footer-tagline">
+                            <span class="en-content">WE BUILD DIGITAL PRESENCE</span>
+                            <span class="es-content">CREAMOS TU MUNDO DIGITAL</span>
+                        </div>
+                    </div>
+                    <div>
+                        <div class="footer-heading">
+                            <span class="en-content">Services</span>
+                            <span class="es-content">Servicios</span>
+                        </div>
+                        <ul class="footer-links">
+                            <li class="footer-link">
+                                <a href="/services/custom-websites.html">
+                                    <span class="en-content">Custom Websites</span>
+                                    <span class="es-content">Sitios Web Personalizados</span>
+                                </a>
+                            </li>
+                            <li class="footer-link">
+                                <a href="/services/photography.html">
+                                    <span class="en-content">Professional Photography</span>
+                                    <span class="es-content">Fotografía Profesional</span>
+                                </a>
+                            </li>
+                            <li class="footer-link">
+                                <a href="/services/content-creation.html">
+                                    <span class="en-content">Content Creation</span>
+                                    <span class="es-content">Creación de Contenido</span>
+                                </a>
+                            </li>
+                            <li class="footer-link">
+                                <a href="/services/social-media.html">
+                                    <span class="en-content">Social Media</span>
+                                    <span class="es-content">Redes Sociales</span>
+                                </a>
+                            </li>
+                            <li class="footer-link">
+                                <a href="/services/digital-marketing.html">
+                                    <span class="en-content">Digital Marketing</span>
+                                    <span class="es-content">Marketing Digital</span>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div>
+                        <div class="footer-heading">
+                            <span class="en-content">Company</span>
+                            <span class="es-content">Empresa</span>
+                        </div>
+                        <ul class="footer-links">
+                            <li class="footer-link">
+                                <a href="/about">
+                                    <span class="en-content">About</span>
+                                    <span class="es-content">Nosotros</span>
+                                </a>
+                            </li>
+                            <li class="footer-link">
+                                <a href="/work">
+                                    <span class="en-content">Work</span>
+                                    <span class="es-content">Proyectos</span>
+                                </a>
+                            </li>
+                            <li class="footer-link">
+                                <a href="/manifesto.html">
+                                    <span class="en-content">Manifesto</span>
+                                    <span class="es-content">Manifiesto</span>
+                                </a>
+                            </li>
+                            <li class="footer-link">
+                                <a href="/contact.html">
+                                    <span class="en-content">Contact</span>
+                                    <span class="es-content">Contacto</span>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div>
+                        <div class="footer-heading">
+                            <span class="en-content">Legal</span>
+                            <span class="es-content">Legal</span>
+                        </div>
+                        <ul class="footer-links">
+                            <li class="footer-link">
+                                <a href="/legal/privacy.html">
+                                    <span class="en-content">Privacy Policy</span>
+                                    <span class="es-content">Política de Privacidad</span>
+                                </a>
+                            </li>
+                            <li class="footer-link">
+                                <a href="/legal/terms.html">
+                                    <span class="en-content">Terms of Service</span>
+                                    <span class="es-content">Términos de Servicio</span>
+                                </a>
+                            </li>
+                            <li class="footer-link">
+                                <a href="/legal/cookies.html">
+                                    <span class="en-content">Cookie Policy</span>
+                                    <span class="es-content">Política de Cookies</span>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="footer-copyright">
+                    <span class="en-content">© 2025 CLIX HOUSE. All rights reserved. Handcrafted with care.</span>
+                    <span class="es-content">© 2025 CLIX HOUSE. Todos los derechos reservados. Elaborado con cuidado.</span>
+                </div>
+            </div>
+        </footer>
+    </div>
+
+    <!-- Return to Top Button -->
+    <div class="return-top">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <polyline points="18 15 12 9 6 15"></polyline>
+        </svg>
+    </div>
+
+    <!-- Scripts -->
+    <script src="assets/js/main.js"></script>
+    
+    <!-- Home-specific Scripts -->
+    <script src="assets/js/home.js"></script>
+</body>
+</html>

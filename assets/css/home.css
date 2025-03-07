@@ -1,0 +1,412 @@
+/* ==========================================================================
+   CLIX HOUSE - Homepage Specific Styles
+   ========================================================================== */
+
+/* Hero Section */
+.hero {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: var(--spacing-xl) 0;
+    margin-top: var(--spacing-l);
+    position: relative;
+}
+
+.hero-kineticWrapper {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    pointer-events: none;
+    opacity: 0.025;
+    overflow: hidden;
+}
+
+.hero-kineticType {
+    position: absolute;
+    font-family: var(--serif);
+    font-size: 200px;
+    font-weight: normal;
+    letter-spacing: -0.05em;
+    white-space: nowrap;
+    color: var(--ink);
+    animation: marquee 20s linear infinite;
+    transform: translateY(-50%) rotate(-5deg);
+}
+
+.hero-content {
+    position: relative;
+    z-index: 10;
+}
+
+.hero-tagline {
+    font-family: var(--serif);
+    font-size: var(--size-xxxl);
+    line-height: 0.9;
+    margin-bottom: var(--spacing-l);
+    overflow: hidden;
+}
+
+/* Services Section */
+.services {
+    padding: var(--spacing-xl) 0;
+    position: relative;
+}
+
+.section-title {
+    font-family: var(--serif);
+    font-size: var(--size-xxl);
+    margin-bottom: var(--spacing-l);
+    overflow: hidden;
+}
+
+.services-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: var(--spacing-l);
+}
+
+.service-card {
+    padding: var(--spacing-l);
+    background-color: var(--paper);
+    border: 1px solid var(--subtle-accent);
+    transition: transform var(--timing-medium) var(--easing-bounce),
+                box-shadow var(--timing-medium) var(--easing-smooth),
+                background-color 1s var(--easing-smooth);
+}
+
+.service-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.05);
+    z-index: 1;
+}
+
+body.dark-mode .service-card {
+    background-color: var(--paper-aged);
+    border-color: rgba(255, 255, 255, 0.05);
+}
+
+body.dark-mode .service-card:hover {
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+}
+
+.service-number {
+    font-family: var(--mono);
+    font-size: var(--size-s);
+    color: rgba(0, 0, 0, 0.3);
+    margin-bottom: var(--spacing-s);
+    transition: color 1s var(--easing-smooth);
+}
+
+body.dark-mode .service-number {
+    color: rgba(255, 255, 255, 0.3);
+}
+
+.service-title {
+    font-family: var(--serif);
+    font-size: var(--size-l);
+    margin-bottom: var(--spacing-s);
+}
+
+.service-description {
+    font-family: var(--mono);
+    font-size: var(--size-m);
+    margin-bottom: var(--spacing-m);
+}
+
+.service-link {
+    font-family: var(--mono);
+    font-size: var(--size-s);
+    display: inline-block;
+    position: relative;
+    padding-bottom: 3px;
+    cursor: pointer;
+    color: var(--ink);
+    text-decoration: none;
+}
+
+.service-link::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 1px;
+    background-color: var(--ink);
+    transform-origin: right;
+    transform: scaleX(0);
+    transition: transform var(--timing-medium) var(--easing-bounce);
+}
+
+.service-link:hover::after {
+    transform-origin: left;
+    transform: scaleX(1);
+}
+
+/* Manifesto */
+.manifesto {
+    padding: var(--spacing-xl) 0;
+    position: relative;
+}
+
+.manifesto-badge {
+    position: absolute;
+    top: var(--spacing-l);
+    right: var(--spacing-l);
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    border: 1px solid var(--subtle-accent);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    text-align: center;
+    font-family: var(--mono);
+    font-size: var(--size-s);
+    animation: slow-spin 20s linear infinite;
+}
+
+.manifesto-content {
+    max-width: 800px;
+}
+
+.manifesto-item {
+    margin-bottom: var(--spacing-l);
+}
+
+.manifesto-number {
+    font-family: var(--mono);
+    font-size: var(--size-s);
+    font-weight: 400;
+    color: rgba(0, 0, 0, 0.3);
+    margin-bottom: var(--spacing-s);
+    transition: color 1s var(--easing-smooth);
+}
+
+body.dark-mode .manifesto-number {
+    color: rgba(255, 255, 255, 0.3);
+}
+
+.manifesto-principle {
+    font-family: var(--serif);
+    font-size: var(--size-xl);
+    line-height: 1.2;
+    margin-bottom: var(--spacing-s);
+}
+
+.manifesto-description {
+    font-family: var(--mono);
+    font-size: var(--size-m);
+    max-width: 600px;
+}
+
+/* Works/Projects */
+.works {
+    padding: var(--spacing-xl) 0;
+    position: relative;
+}
+
+.works-grid {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    gap: var(--spacing-s);
+}
+
+.work-item {
+    position: relative;
+    border: 1px solid var(--subtle-accent);
+    background-color: var(--paper);
+    overflow: hidden;
+}
+
+.work-item-accent {
+    grid-column: span 8;
+    height: 500px;
+}
+
+.work-item-standard {
+    grid-column: span 4;
+    height: 500px;
+}
+
+.work-item-large {
+    grid-column: span 12;
+    height: 600px;
+}
+
+body.dark-mode .work-item {
+    background-color: var(--paper-aged);
+    border-color: rgba(255, 255, 255, 0.05);
+}
+
+.work-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    filter: grayscale(100%);
+    mix-blend-mode: multiply;
+    opacity: 0.9;
+    transition: transform var(--timing-slow) var(--easing-smooth),
+                filter var(--timing-slow) var(--easing-smooth),
+                opacity var(--timing-slow) var(--easing-smooth);
+}
+
+body.dark-mode .work-image {
+    mix-blend-mode: screen;
+    opacity: 0.7;
+}
+
+.work-item:hover .work-image {
+    transform: scale(1.05);
+    filter: grayscale(0);
+    opacity: 1;
+}
+
+.work-overlay {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    padding: var(--spacing-m);
+    background: linear-gradient(
+        to top,
+        var(--paper) 0%,
+        rgba(255, 252, 248, 0.8) 70%,
+        rgba(255, 252, 248, 0) 100%
+    );
+    transition: background 1s var(--easing-smooth);
+    z-index: 2;
+}
+
+body.dark-mode .work-overlay {
+    background: linear-gradient(
+        to top,
+        var(--paper) 0%,
+        rgba(0, 0, 0, 0.8) 70%,
+        rgba(0, 0, 0, 0) 100%
+    );
+}
+
+.work-category {
+    font-family: var(--mono);
+    font-size: var(--size-xs);
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    margin-bottom: var(--spacing-xs);
+}
+
+.work-title {
+    font-family: var(--serif);
+    font-size: var(--size-l);
+    margin-bottom: var(--spacing-xs);
+}
+
+.work-description {
+    font-family: var(--mono);
+    font-size: var(--size-s);
+    max-width: 90%;
+}
+
+.work-link-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 3;
+}
+
+/* Contact CTA Section */
+.contact-cta {
+    padding: var(--spacing-xl) 0;
+    background-color: var(--subtle-shade);
+    margin: var(--spacing-xl) 0;
+    text-align: center;
+    transition: background-color 1s var(--easing-smooth);
+}
+
+body.dark-mode .contact-cta {
+    background-color: rgba(255, 255, 255, 0.03);
+}
+
+.contact-cta-content {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: var(--spacing-l) 0;
+}
+
+.contact-cta-title {
+    font-size: var(--size-xxl);
+    margin-bottom: var(--spacing-m);
+}
+
+.contact-cta-text {
+    font-family: var(--mono);
+    font-size: var(--size-l);
+    margin-bottom: var(--spacing-l);
+}
+
+/* Utility classes */
+.text-center {
+    text-align: center;
+}
+
+.mt-48 {
+    margin-top: 48px;
+}
+
+/* Responsive Styles */
+@media (max-width: 1024px) {
+    .works-grid {
+        grid-template-columns: repeat(6, 1fr);
+    }
+
+    .work-item-accent, .work-item-large {
+        grid-column: span 6;
+    }
+
+    .work-item-standard {
+        grid-column: span 3;
+    }
+}
+
+@media (max-width: 768px) {
+    .hero-tagline {
+        font-size: var(--size-xxl);
+    }
+
+    .hero-description {
+        font-size: calc(var(--size-m) * 1.2);
+    }
+
+    .service-card {
+        padding: var(--spacing-m);
+    }
+
+    .works-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .work-item-accent, .work-item-standard, .work-item-large {
+        grid-column: span 1;
+        height: 400px;
+    }
+
+    .manifesto-badge {
+        display: none;
+    }
+    
+    .contact-cta-title {
+        font-size: calc(var(--size-xl) * 1.2);
+    }
+    
+    .contact-cta-text {
+        font-size: var(--size-m);
+    }
+}

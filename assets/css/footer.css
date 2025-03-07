@@ -1,0 +1,130 @@
+/* ==========================================================================
+   CLIX HOUSE - Footer Styles
+   ========================================================================== */
+
+/* Footer */
+.footer {
+    padding: var(--spacing-xl) 0 var(--spacing-l);
+    border-top: 1px solid var(--subtle-accent);
+    margin-top: var(--spacing-xl);
+}
+
+.footer-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: var(--spacing-l);
+}
+
+.footer-logo {
+    font-family: var(--serif);
+    font-size: var(--size-l);
+    margin-bottom: var(--spacing-s);
+}
+
+.footer-tagline {
+    font-family: var(--mono);
+    font-size: var(--size-s);
+    margin-bottom: var(--spacing-m);
+}
+
+.footer-heading {
+    font-family: var(--mono);
+    font-size: var(--size-s);
+    font-weight: 600;
+    margin-bottom: var(--spacing-s);
+}
+
+.footer-links {
+    list-style: none;
+}
+
+.footer-link {
+    font-family: var(--mono);
+    font-size: var(--size-s);
+    margin-bottom: var(--spacing-xs);
+}
+
+.footer-link a {
+    color: var(--ink);
+    text-decoration: none;
+    position: relative;
+    display: inline-block;
+    padding-bottom: 2px;
+}
+
+.footer-link a::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 1px;
+    background-color: var(--ink);
+    transform-origin: right;
+    transform: scaleX(0);
+    transition: transform var(--timing-medium) var(--easing-bounce);
+}
+
+.footer-link a:hover::after {
+    transform-origin: left;
+    transform: scaleX(1);
+}
+
+.footer-copyright {
+    font-family: var(--mono);
+    font-size: var(--size-xs);
+    margin-top: var(--spacing-l);
+    padding-top: var(--spacing-m);
+    border-top: 1px solid var(--subtle-shade);
+}
+
+/* Return to top button */
+.return-top {
+    position: fixed;
+    bottom: var(--spacing-m);
+    right: var(--spacing-m);
+    width: 50px;
+    height: 50px;
+    background-color: var(--ink);
+    color: var(--paper);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity var(--timing-medium) var(--easing-smooth),
+                transform var(--timing-medium) var(--easing-bounce),
+                background-color 1s var(--easing-smooth);
+    z-index: 90;
+}
+
+.return-top.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+body.dark-mode .return-top {
+    background-color: var(--paper);
+    color: var(--ink);
+}
+
+.return-top svg {
+    width: 20px;
+    height: 20px;
+    fill: currentColor;
+}
+
+@media (max-width: 1024px) {
+    .footer-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 768px) {
+    .footer-grid {
+        grid-template-columns: 1fr;
+        gap: var(--spacing-m);
+    }
+}

@@ -1,0 +1,639 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Baja Surf Experience | CLIX HOUSE - Digital Craft Studio</title>
+    <meta name="description" content="A case study of our work for Baja Surf Experience—a bilingual digital platform that captures the essence of surf culture through constraint-based design and kinetic typography.">
+    
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=Inconsolata:wght@300;400;500;600&display=swap" rel="stylesheet">
+    
+    <!-- Stylesheets -->
+    <link rel="stylesheet" href="/assets/css/main.css">
+    <link rel="stylesheet" href="/assets/css/header.css">
+    <link rel="stylesheet" href="/assets/css/footer.css">
+    <link rel="stylesheet" href="/assets/css/animations.css">
+    
+    <!-- Page-specific CSS -->
+    <link rel="stylesheet" href="/assets/css/project.css">
+    
+    <!-- Favicon -->
+    <link rel="icon" href="/assets/images/favicon.ico">
+</head>
+<body>
+    <!-- Atmospheric Effects -->
+    <div class="paper-texture"></div>
+    <div class="vignette"></div>
+    <div class="paper-edge paper-edge-top"></div>
+    <div class="paper-edge paper-edge-bottom"></div>
+    <div class="paper-edge paper-edge-left"></div>
+    <div class="paper-edge paper-edge-right"></div>
+
+    <!-- Custom Cursor -->
+    <div class="custom-cursor"></div>
+    <div class="cursor-follower"></div>
+
+    <!-- Header -->
+    <header class="header">
+        <div class="container">
+            <div class="header-content">
+                <a href="/" class="logo">CLIX HOUSE</a>
+                <div class="flex items-center">
+                    <nav class="nav-desktop">
+                        <a href="/services" class="nav-link">
+                            <span class="en-content">Services</span>
+                            <span class="es-content">Servicios</span>
+                        </a>
+                        <a href="/manifesto.html" class="nav-link">
+                            <span class="en-content">Manifesto</span>
+                            <span class="es-content">Manifiesto</span>
+                        </a>
+                        <a href="/work" class="nav-link active">
+                            <span class="en-content">Work</span>
+                            <span class="es-content">Proyectos</span>
+                        </a>
+                        <a href="/about" class="nav-link">
+                            <span class="en-content">About</span>
+                            <span class="es-content">Sobre Nosotros</span>
+                        </a>
+                        <a href="/contact.html" class="nav-link">
+                            <span class="en-content">Contact</span>
+                            <span class="es-content">Contacto</span>
+                        </a>
+                    </nav>
+                    <div class="language-toggle">
+                        <button class="language-btn active" data-lang="en">EN</button>
+                        <button class="language-btn" data-lang="es">ES</button>
+                        <div class="language-indicator"></div>
+                    </div>
+                    <button class="mode-toggle" aria-label="Toggle dark mode">
+                        <svg class="mode-icon mode-icon-sun" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <circle cx="12" cy="12" r="5"></circle>
+                            <line x1="12" y1="1" x2="12" y2="3"></line>
+                            <line x1="12" y1="21" x2="12" y2="23"></line>
+                            <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+                            <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+                            <line x1="1" y1="12" x2="3" y2="12"></line>
+                            <line x1="21" y1="12" x2="23" y2="12"></line>
+                            <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+                            <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+                        </svg>
+                        <svg class="mode-icon mode-icon-moon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+                        </svg>
+                    </button>
+                    <div class="nav-toggle">
+                        <div class="nav-toggle-line"></div>
+                        <div class="nav-toggle-line"></div>
+                        <div class="nav-toggle-line"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Mobile Navigation -->
+    <div class="nav-mobile">
+        <div class="container">
+            <div class="nav-mobile-links">
+                <a href="/services" class="nav-mobile-link">
+                    <span class="en-content">Services</span>
+                    <span class="es-content">Servicios</span>
+                </a>
+                <a href="/manifesto.html" class="nav-mobile-link">
+                    <span class="en-content">Manifesto</span>
+                    <span class="es-content">Manifiesto</span>
+                </a>
+                <a href="/work" class="nav-mobile-link active">
+                    <span class="en-content">Work</span>
+                    <span class="es-content">Proyectos</span>
+                </a>
+                <a href="/about" class="nav-mobile-link">
+                    <span class="en-content">About</span>
+                    <span class="es-content">Sobre Nosotros</span>
+                </a>
+                <a href="/contact.html" class="nav-mobile-link">
+                    <span class="en-content">Contact</span>
+                    <span class="es-content">Contacto</span>
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Main Content -->
+    <div class="page-content">
+        <main>
+            <!-- Project Hero Section -->
+            <section class="project-hero">
+                <div class="container">
+                    <div class="project-hero-content">
+                        <div class="project-category fade-in">
+                            <span class="en-content">Website & Identity</span>
+                            <span class="es-content">Sitio Web e Identidad</span>
+                        </div>
+                        <h1 class="project-title">
+                            <span class="text-reveal">
+                                <span class="text-reveal-content en-content">Baja Surf Experience</span>
+                                <span class="text-reveal-content es-content">Experiencia de Surf en Baja</span>
+                            </span>
+                        </h1>
+                    </div>
+                </div>
+                <div class="project-hero-image">
+                    <div class="parallax-container">
+                        <img src="/api/placeholder/1920/1080" alt="Baja Surf Experience website on multiple devices" class="parallax-image">
+                    </div>
+                </div>
+            </section>
+            
+            <!-- Project Overview Section -->
+            <section class="project-overview">
+                <div class="container">
+                    <div class="overview-grid">
+                        <div class="overview-content fade-in">
+                            <h2 class="section-heading">
+                                <span class="en-content">Project Overview</span>
+                                <span class="es-content">Visión General del Proyecto</span>
+                            </h2>
+                            <p class="large-text">
+                                <span class="en-content">Baja Surf Experience needed a digital presence that could authentically capture the ethos of their surf retreats while effectively serving both English and Spanish-speaking audiences across North America.</span>
+                                <span class="es-content">Baja Surf Experience necesitaba una presencia digital que pudiera capturar auténticamente el espíritu de sus retiros de surf mientras servía eficazmente tanto a audiencias de habla inglesa como española en toda América del Norte.</span>
+                            </p>
+                            <p>
+                                <span class="en-content">By embracing the dualities of their brand—the meditative calm and kinetic energy of surfing, the traditional and contemporary aspects of Baja California culture—we created a bilingual typographic journey that resonates with surf enthusiasts from both sides of the border.</span>
+                                <span class="es-content">Al abrazar las dualidades de su marca—la calma meditativa y la energía cinética del surf, los aspectos tradicionales y contemporáneos de la cultura de Baja California—creamos un viaje tipográfico bilingüe que resuena con entusiastas del surf de ambos lados de la frontera.</span>
+                            </p>
+                        </div>
+                        <div class="overview-meta">
+                            <div class="meta-block fade-in">
+                                <h3 class="meta-title">
+                                    <span class="en-content">Client</span>
+                                    <span class="es-content">Cliente</span>
+                                </h3>
+                                <p>Baja Surf Experience</p>
+                            </div>
+                            <div class="meta-block fade-in">
+                                <h3 class="meta-title">
+                                    <span class="en-content">Services</span>
+                                    <span class="es-content">Servicios</span>
+                                </h3>
+                                <ul class="meta-list">
+                                    <li>
+                                        <span class="en-content">Brand Identity</span>
+                                        <span class="es-content">Identidad de Marca</span>
+                                    </li>
+                                    <li>
+                                        <span class="en-content">Website Design</span>
+                                        <span class="es-content">Diseño Web</span>
+                                    </li>
+                                    <li>
+                                        <span class="en-content">Custom Development</span>
+                                        <span class="es-content">Desarrollo Personalizado</span>
+                                    </li>
+                                    <li>
+                                        <span class="en-content">Bilingual Content Strategy</span>
+                                        <span class="es-content">Estrategia de Contenido Bilingüe</span>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="meta-block fade-in">
+                                <h3 class="meta-title">
+                                    <span class="en-content">Year</span>
+                                    <span class="es-content">Año</span>
+                                </h3>
+                                <p>2023</p>
+                            </div>
+                            <div class="meta-block fade-in">
+                                <h3 class="meta-title">
+                                    <span class="en-content">Visit Site</span>
+                                    <span class="es-content">Visitar Sitio</span>
+                                </h3>
+                                <a href="#" class="site-link" target="_blank">bajasurfexperience.com</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            
+            <!-- Challenge Section -->
+            <section class="project-challenge">
+                <div class="container">
+                    <div class="challenge-content">
+                        <h2 class="section-heading stagger-item">
+                            <span class="en-content">The Challenge</span>
+                            <span class="es-content">El Desafío</span>
+                        </h2>
+                        <div class="challenge-grid">
+                            <div class="challenge-text stagger-item">
+                                <p>
+                                    <span class="en-content">Baja Surf Experience faced several challenges in creating their digital presence. First, they needed to appeal to both experienced surfers seeking authentic adventure and beginners looking for guided instruction—two audiences with different needs and expectations.</span>
+                                    <span class="es-content">Baja Surf Experience enfrentó varios desafíos al crear su presencia digital. Primero, necesitaban atraer tanto a surfistas experimentados que buscan aventuras auténticas como a principiantes que buscan instrucción guiada—dos audiencias con diferentes necesidades y expectativas.</span>
+                                </p>
+                                <p>
+                                    <span class="en-content">Second, as a cross-border business operating in both California and Baja California, they required a seamlessly bilingual experience without compromising design integrity or user experience in either language.</span>
+                                    <span class="es-content">Segundo, como un negocio transfronterizo que opera tanto en California como en Baja California, requerían una experiencia perfectamente bilingüe sin comprometer la integridad del diseño o la experiencia del usuario en ningún idioma.</span>
+                                </p>
+                                <p>
+                                    <span class="en-content">Finally, they needed a technical solution that would perform well in areas with limited connectivity, ensuring their site remained accessible to users researching surf experiences while already traveling in remote coastal regions.</span>
+                                    <span class="es-content">Finalmente, necesitaban una solución técnica que funcionara bien en áreas con conectividad limitada, asegurando que su sitio permaneciera accesible para usuarios investigando experiencias de surf mientras ya viajaban en regiones costeras remotas.</span>
+                                </p>
+                            </div>
+                            <div class="challenge-image stagger-item">
+                                <img src="/api/placeholder/600/800" alt="Surfer looking at ocean in Baja California" class="parallax-image">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            
+            <!-- Approach Section -->
+            <section class="project-approach">
+                <div class="container">
+                    <h2 class="section-heading stagger-item">
+                        <span class="en-content">Our Approach</span>
+                        <span class="es-content">Nuestro Enfoque</span>
+                    </h2>
+                    
+                    <div class="approach-item stagger-item">
+                        <div class="approach-number">01</div>
+                        <div class="approach-content">
+                            <h3 class="approach-title">
+                                <span class="en-content">Research & Immersion</span>
+                                <span class="es-content">Investigación e Inmersión</span>
+                            </h3>
+                            <div class="approach-text">
+                                <p>
+                                    <span class="en-content">We began with a week-long immersion at the Baja Surf Experience camp, participating in their retreats and interviewing both instructors and participants. This ethnographic research provided authentic insights into the cultural and emotional aspects of the surf experience—the rhythm of the tides, the meditative moments, and the vibrant community.</span>
+                                    <span class="es-content">Comenzamos con una inmersión de una semana en el campamento de Baja Surf Experience, participando en sus retiros y entrevistando tanto a instructores como a participantes. Esta investigación etnográfica proporcionó ideas auténticas sobre los aspectos culturales y emocionales de la experiencia de surf—el ritmo de las mareas, los momentos meditativos y la vibrante comunidad.</span>
+                                </p>
+                                <p>
+                                    <span class="en-content">We studied regional typography from both California and Baja California, seeking inspiration from coastal signage, surfboard graphics, and traditional Mexican design elements that could inform our visual approach.</span>
+                                    <span class="es-content">Estudiamos la tipografía regional tanto de California como de Baja California, buscando inspiración en señalización costera, gráficos de tablas de surf y elementos de diseño tradicional mexicano que pudieran informar nuestro enfoque visual.</span>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="approach-item stagger-item">
+                        <div class="approach-number">02</div>
+                        <div class="approach-content">
+                            <h3 class="approach-title">
+                                <span class="en-content">Content Strategy</span>
+                                <span class="es-content">Estrategia de Contenido</span>
+                            </h3>
+                            <div class="approach-text">
+                                <p>
+                                    <span class="en-content">Rather than creating separate English and Spanish sites, we developed a dual-language architecture that maintains content parity while allowing for cultural nuances in each language. We created a custom CMS that explicitly links corresponding content blocks, ensuring updates remain synchronized across languages.</span>
+                                    <span class="es-content">En lugar de crear sitios separados en inglés y español, desarrollamos una arquitectura de doble idioma que mantiene la paridad de contenido mientras permite matices culturales en cada idioma. Creamos un CMS personalizado que vincula explícitamente bloques de contenido correspondientes, asegurando que las actualizaciones permanezcan sincronizadas entre idiomas.</span>
+                                </p>
+                                <p>
+                                    <span class="en-content">We developed a content strategy organized around surf concepts that translate meaningfully across cultures—rhythm, patience, presence, and connection—creating a narrative structure that resonates authentically in both English and Spanish.</span>
+                                    <span class="es-content">Desarrollamos una estrategia de contenido organizada en torno a conceptos de surf que se traducen significativamente entre culturas—ritmo, paciencia, presencia y conexión—creando una estructura narrativa que resuena auténticamente tanto en inglés como en español.</span>
+                                </p>
+                            </div>
+                            <div class="approach-image">
+                                <img src="/api/placeholder/1200/600" alt="Content strategy wireframes showing bilingual structure" class="wide-image">
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="approach-item stagger-item">
+                        <div class="approach-number">03</div>
+                        <div class="approach-content">
+                            <h3 class="approach-title">
+                                <span class="en-content">Typographic System</span>
+                                <span class="es-content">Sistema Tipográfico</span>
+                            </h3>
+                            <div class="approach-text">
+                                <p>
+                                    <span class="en-content">We developed a sophisticated typographic system that functions effectively in both languages, creating a dual-script harmony that accommodates the differing space requirements and rhythm of English and Spanish. Our type hierarchy creates visual rhythm that mirrors the pacing of waves—alternating between moments of dramatic impact and meditative calm.</span>
+                                    <span class="es-content">Desarrollamos un sofisticado sistema tipográfico que funciona eficazmente en ambos idiomas, creando una armonía de doble escritura que acomoda los diferentes requisitos de espacio y ritmo del inglés y español. Nuestra jerarquía tipográfica crea un ritmo visual que refleja el compás de las olas—alternando entre momentos de impacto dramático y calma meditativa.</span>
+                                </p>
+                            </div>
+                            <div class="approach-image-grid">
+                                <img src="/api/placeholder/600/400" alt="Typography specimen showing dual-language system" class="grid-image">
+                                <img src="/api/placeholder/600/400" alt="Typography in use on website headers" class="grid-image">
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="approach-item stagger-item">
+                        <div class="approach-number">04</div>
+                        <div class="approach-content">
+                            <h3 class="approach-title">
+                                <span class="en-content">Technical Architecture</span>
+                                <span class="es-content">Arquitectura Técnica</span>
+                            </h3>
+                            <div class="approach-text">
+                                <p>
+                                    <span class="en-content">We built a Progressive Web App with aggressive caching strategies, ensuring the site performs well even in areas with limited connectivity. The architecture prioritizes initial loading of critical content and navigation paths, with non-essential images and features loading progressively as connectivity allows.</span>
+                                    <span class="es-content">Construimos una Aplicación Web Progresiva con estrategias de almacenamiento en caché agresivas, asegurando que el sitio funcione bien incluso en áreas con conectividad limitada. La arquitectura prioriza la carga inicial de contenido crítico y rutas de navegación, con imágenes y características no esenciales cargando progresivamente según lo permita la conectividad.</span>
+                                </p>
+                                <p>
+                                    <span class="en-content">Our booking system integrates with their existing operations infrastructure while providing offline data collection capabilities—allowing retreat leaders to register new participants even when temporarily disconnected.</span>
+                                    <span class="es-content">Nuestro sistema de reservas se integra con su infraestructura de operaciones existente mientras proporciona capacidades de recolección de datos sin conexión—permitiendo a los líderes de retiros registrar nuevos participantes incluso cuando están temporalmente desconectados.</span>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            
+            <!-- Solution Showcase Section -->
+            <section class="project-solution">
+                <div class="container">
+                    <h2 class="section-heading stagger-item">
+                        <span class="en-content">The Solution</span>
+                        <span class="es-content">La Solución</span>
+                    </h2>
+                    
+                    <div class="solution-gallery">
+                        <div class="gallery-item full stagger-item">
+                            <img src="/api/placeholder/1400/800" alt="Baja Surf Experience homepage on desktop" class="gallery-image">
+                            <div class="image-caption">
+                                <span class="en-content">Homepage showcasing the dual-language typographic system with wave-inspired motion design</span>
+                                <span class="es-content">Página de inicio mostrando el sistema tipográfico bilingüe con diseño de movimiento inspirado en olas</span>
+                            </div>
+                        </div>
+                        
+                        <div class="gallery-item half stagger-item">
+                            <img src="/api/placeholder/700/500" alt="Mobile view of retreat booking process" class="gallery-image">
+                            <div class="image-caption">
+                                <span class="en-content">Mobile booking flow optimized for low-bandwidth environments</span>
+                                <span class="es-content">Flujo de reserva móvil optimizado para entornos de bajo ancho de banda</span>
+                            </div>
+                        </div>
+                        
+                        <div class="gallery-item half stagger-item">
+                            <img src="/api/placeholder/700/500" alt="Language toggle interaction" class="gallery-image">
+                            <div class="image-caption">
+                                <span class="en-content">Seamless language toggle with wave-inspired transition between English and Spanish</span>
+                                <span class="es-content">Cambio de idioma perfecto con transición inspirada en olas entre inglés y español</span>
+                            </div>
+                        </div>
+                        
+                        <div class="gallery-item full stagger-item">
+                            <img src="/api/placeholder/1400/800" alt="Retreat detail page showing location map and schedule" class="gallery-image">
+                            <div class="image-caption">
+                                <span class="en-content">Retreat detail page with interactive tide schedule and location information</span>
+                                <span class="es-content">Página de detalle de retiro con horario de mareas interactivo e información de ubicación</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            
+            <!-- Results Section -->
+            <section class="project-results">
+                <div class="container">
+                    <h2 class="section-heading stagger-item">
+                        <span class="en-content">The Results</span>
+                        <span class="es-content">Los Resultados</span>
+                    </h2>
+                    
+                    <div class="results-content stagger-item">
+                        <p class="large-text">
+                            <span class="en-content">Within six months of launch, Baja Surf Experience saw transformative results across their key metrics.</span>
+                            <span class="es-content">Dentro de los seis meses del lanzamiento, Baja Surf Experience vio resultados transformadores en todos sus indicadores clave.</span>
+                        </p>
+                    </div>
+                    
+                    <div class="results-grid">
+                        <div class="result-item stagger-item">
+                            <div class="result-number">+127%</div>
+                            <div class="result-label">
+                                <span class="en-content">Increase in online bookings</span>
+                                <span class="es-content">Aumento en reservas en línea</span>
+                            </div>
+                        </div>
+                        
+                        <div class="result-item stagger-item">
+                            <div class="result-number">68%</div>
+                            <div class="result-label">
+                                <span class="en-content">Reduction in booking abandonment</span>
+                                <span class="es-content">Reducción en abandono de reservas</span>
+                            </div>
+                        </div>
+                        
+                        <div class="result-item stagger-item">
+                            <div class="result-number">4.8<span class="result-unit">/5</span></div>
+                            <div class="result-label">
+                                <span class="en-content">User satisfaction rating</span>
+                                <span class="es-content">Calificación de satisfacción del usuario</span>
+                            </div>
+                        </div>
+                        
+                        <div class="result-item stagger-item">
+                            <div class="result-number">42%</div>
+                            <div class="result-label">
+                                <span class="en-content">Growth in Spanish-speaking clientele</span>
+                                <span class="es-content">Crecimiento en clientela hispanohablante</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="testimonial stagger-item">
+                        <div class="testimonial-content">
+                            <div class="testimonial-quote">
+                                <span class="en-content">"CLIX HOUSE created a digital experience that authentically captures the soul of our surf retreats. The bilingual approach has opened new markets for us, and the thoughtful performance optimizations mean our site works flawlessly even in the remote beaches where we operate."</span>
+                                <span class="es-content">"CLIX HOUSE creó una experiencia digital que captura auténticamente el alma de nuestros retiros de surf. El enfoque bilingüe ha abierto nuevos mercados para nosotros, y las optimizaciones de rendimiento consideradas significan que nuestro sitio funciona impecablemente incluso en las playas remotas donde operamos."</span>
+                            </div>
+                            <div class="testimonial-author">
+                                <div class="author-name">Marco Alvarez</div>
+                                <div class="author-title">
+                                    <span class="en-content">Founder, Baja Surf Experience</span>
+                                    <span class="es-content">Fundador, Baja Surf Experience</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            
+            <!-- Next Project Section -->
+            <section class="next-project">
+                <div class="container">
+                    <h2 class="section-heading stagger-item">
+                        <span class="en-content">Next Project</span>
+                        <span class="es-content">Siguiente Proyecto</span>
+                    </h2>
+                    
+                    <a href="/work/pacific-winery.html" class="next-project-link stagger-item">
+                        <div class="next-project-image">
+                            <img src="/api/placeholder/1200/600" alt="Pacific Coast Winery project preview" class="parallax-image">
+                            <div class="project-overlay"></div>
+                        </div>
+                        <div class="next-project-content">
+                            <div class="project-category">
+                                <span class="en-content">Digital Platform</span>
+                                <span class="es-content">Plataforma Digital</span>
+                            </div>
+                            <h3 class="project-name">
+                                <span class="en-content">Pacific Coast Winery</span>
+                                <span class="es-content">Bodega de la Costa Pacífica</span>
+                            </h3>
+                            <div class="project-arrow">
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                    <line x1="5" y1="12" x2="19" y2="12"></line>
+                                    <polyline points="12 5 19 12 12 19"></polyline>
+                                </svg>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+            </section>
+            
+            <!-- Contact CTA Section -->
+            <section class="contact-cta">
+                <div class="container">
+                    <div class="contact-cta-content">
+                        <h2 class="contact-cta-title serif">
+                            <span class="en-content">Ready to build your digital presence?</span>
+                            <span class="es-content">¿Listo para construir tu presencia digital?</span>
+                        </h2>
+                        <p class="contact-cta-text">
+                            <span class="en-content">Let's create something together that embodies clarity, purpose, and timeless design.</span>
+                            <span class="es-content">Creemos algo juntos que encarne claridad, propósito y diseño atemporal.</span>
+                        </p>
+                        <a href="/contact.html" class="button">
+                            <span class="en-content">Start a conversation</span>
+                            <span class="es-content">Iniciar una conversación</span>
+                        </a>
+                    </div>
+                </div>
+            </section>
+        </main>
+
+        <!-- Footer -->
+        <footer class="footer">
+            <div class="container">
+                <div class="footer-grid">
+                    <div>
+                        <div class="footer-logo">CLIX HOUSE</div>
+                        <div class="footer-tagline">
+                            <span class="en-content">WE BUILD DIGITAL PRESENCE</span>
+                            <span class="es-content">CREAMOS TU MUNDO DIGITAL</span>
+                        </div>
+                    </div>
+                    <div>
+                        <div class="footer-heading">
+                            <span class="en-content">Services</span>
+                            <span class="es-content">Servicios</span>
+                        </div>
+                        <ul class="footer-links">
+                            <li class="footer-link">
+                                <a href="/services/custom-websites.html">
+                                    <span class="en-content">Custom Websites</span>
+                                    <span class="es-content">Sitios Web Personalizados</span>
+                                </a>
+                            </li>
+                            <li class="footer-link">
+                                <a href="/services/photography.html">
+                                    <span class="en-content">Professional Photography</span>
+                                    <span class="es-content">Fotografía Profesional</span>
+                                </a>
+                            </li>
+                            <li class="footer-link">
+                                <a href="/services/content-creation.html">
+                                    <span class="en-content">Content Creation</span>
+                                    <span class="es-content">Creación de Contenido</span>
+                                </a>
+                            </li>
+                            <li class="footer-link">
+                                <a href="/services/social-media.html">
+                                    <span class="en-content">Social Media</span>
+                                    <span class="es-content">Redes Sociales</span>
+                                </a>
+                            </li>
+                            <li class="footer-link">
+                                <a href="/services/digital-marketing.html">
+                                    <span class="en-content">Digital Marketing</span>
+                                    <span class="es-content">Marketing Digital</span>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div>
+                        <div class="footer-heading">
+                            <span class="en-content">Company</span>
+                            <span class="es-content">Empresa</span>
+                        </div>
+                        <ul class="footer-links">
+                            <li class="footer-link">
+                                <a href="/about">
+                                    <span class="en-content">About</span>
+                                    <span class="es-content">Nosotros</span>
+                                </a>
+                            </li>
+                            <li class="footer-link">
+                                <a href="/work">
+                                    <span class="en-content">Work</span>
+                                    <span class="es-content">Proyectos</span>
+                                </a>
+                            </li>
+                            <li class="footer-link">
+                                <a href="/manifesto.html">
+                                    <span class="en-content">Manifesto</span>
+                                    <span class="es-content">Manifiesto</span>
+                                </a>
+                            </li>
+                            <li class="footer-link">
+                                <a href="/contact.html">
+                                    <span class="en-content">Contact</span>
+                                    <span class="es-content">Contacto</span>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div>
+                        <div class="footer-heading">
+                            <span class="en-content">Legal</span>
+                            <span class="es-content">Legal</span>
+                        </div>
+                        <ul class="footer-links">
+                            <li class="footer-link">
+                                <a href="/legal/privacy.html">
+                                    <span class="en-content">Privacy Policy</span>
+                                    <span class="es-content">Política de Privacidad</span>
+                                </a>
+                            </li>
+                            <li class="footer-link">
+                                <a href="/legal/terms.html">
+                                    <span class="en-content">Terms of Service</span>
+                                    <span class="es-content">Términos de Servicio</span>
+                                </a>
+                            </li>
+                            <li class="footer-link">
+                                <a href="/legal/cookies.html">
+                                    <span class="en-content">Cookie Policy</span>
+                                    <span class="es-content">Política de Cookies</span>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="footer-copyright">
+                    <span class="en-content">© 2025 CLIX HOUSE. All rights reserved. Handcrafted with care.</span>
+                    <span class="es-content">© 2025 CLIX HOUSE. Todos los derechos reservados. Elaborado con cuidado.</span>
+                </div>
+            </div>
+        </footer>
+    </div>
+
+    <!-- Return to Top Button -->
+    <div class="return-top">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <polyline points="18 15 12 9 6 15"></polyline>
+        </svg>
+    </div>
+
+    <!-- Scripts -->
+    <script src="/assets/js/main.js"></script>
+    
+    <!-- Page-specific Scripts -->
+    <script src="/assets/js/project.js"></script>
+</body>
+</html>

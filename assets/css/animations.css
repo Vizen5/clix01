@@ -1,0 +1,224 @@
+/* ==========================================================================
+   CLIX HOUSE - Animations and Transitions
+   ========================================================================== */
+
+/* Text reveal animation */
+.text-reveal {
+    display: inline-block;
+    position: relative;
+    overflow: hidden;
+}
+
+.text-reveal::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    background-color: var(--ink);
+    transform: translateX(-101%);
+}
+
+.text-reveal.active::after {
+    transform: translateX(101%);
+    transition: transform 1.2s var(--easing-smooth);
+}
+
+.text-reveal-content {
+    opacity: 0;
+}
+
+.text-reveal.active .text-reveal-content {
+    opacity: 1;
+    transition: opacity 0.01s linear 0.6s;
+}
+
+/* Hero tagline animations */
+.hero-tagline-line {
+    display: block;
+    overflow: hidden;
+    height: 1.1em;
+}
+
+.hero-tagline-text {
+    display: block;
+    transform: translateY(100%);
+    opacity: 0;
+    transition: transform 1.2s var(--easing-smooth),
+                opacity 0.01s linear 0.6s;
+}
+
+.hero-tagline-text.revealed {
+    transform: translateY(0);
+    opacity: 1;
+}
+
+/* Fade-in animation */
+.fade-in {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: opacity 1s var(--easing-smooth),
+                transform 1s var(--easing-smooth);
+}
+
+.fade-in.revealed {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Staggered reveal for multiple items */
+.stagger-item {
+    opacity: 0;
+    transform: translateY(30px);
+}
+
+.stagger-item.revealed {
+    opacity: 1;
+    transform: translateY(0);
+    transition: opacity 1s var(--easing-smooth),
+                transform 1s var(--easing-smooth);
+}
+
+/* Page transitions */
+.page-transition {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background-color: var(--ink);
+    z-index: 9999;
+    transform: translateY(100%);
+    transition: transform 0.6s var(--easing-smooth);
+    pointer-events: none;
+}
+
+.page-transition.active {
+    transform: translateY(0);
+}
+
+.page-transition.exit {
+    transform: translateY(-100%);
+}
+
+/* Rotating animation */
+@keyframes slow-spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+.rotate {
+    animation: slow-spin 20s linear infinite;
+}
+
+/* Marquee animation */
+@keyframes marquee {
+    0% { transform: translateX(-50%) translateY(-50%) rotate(-5deg); }
+    100% { transform: translateX(-150%) translateY(-50%) rotate(-5deg); }
+}
+
+.marquee {
+    animation: marquee 20s linear infinite;
+}
+
+/* Image hover interactions */
+.hover-scale {
+    transition: transform var(--timing-slow) var(--easing-smooth),
+                filter var(--timing-slow) var(--easing-smooth),
+                opacity var(--timing-slow) var(--easing-smooth);
+}
+
+.hover-scale:hover {
+    transform: scale(1.05);
+}
+
+/* Page-specific loading animations */
+.page-loading {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background-color: var(--paper-warm);
+    z-index: 9998;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: opacity 0.6s var(--easing-smooth);
+}
+
+body.dark-mode .page-loading {
+    background-color: var(--paper);
+}
+
+.page-loading.hidden {
+    opacity: 0;
+    pointer-events: none;
+}
+
+.loading-text {
+    font-family: var(--serif);
+    font-size: var(--size-xl);
+    position: relative;
+}
+
+.loading-text::after {
+    content: '.';
+    position: relative;
+    display: inline-block;
+    animation: blink 1s steps(2, jump-none) infinite;
+}
+
+/* Custom Cursor */
+.custom-cursor {
+    position: fixed;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background-color: var(--ink);
+    pointer-events: none;
+    z-index: 9999;
+    opacity: 0;
+    mix-blend-mode: difference;
+    transition: opacity 0.3s var(--easing-smooth);
+}
+
+.cursor-follower {
+    position: fixed;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    border: 1px solid var(--ink);
+    pointer-events: none;
+    z-index: 9998;
+    opacity: 0;
+    transition: transform 0.1s var(--easing-smooth),
+                opacity 0.3s var(--easing-smooth),
+                width 0.3s var(--easing-bounce),
+                height 0.3s var(--easing-bounce);
+}
+
+/* Hover states for cursor */
+.cursor-hover {
+    width: 80px;
+    height: 80px;
+    background-color: rgba(0, 0, 0, 0.05);
+    border: none;
+}
+
+/* Image parallax effect */
+.parallax-container {
+    position: relative;
+    overflow: hidden;
+}
+
+.parallax-image {
+    position: absolute;
+    top: -20%;
+    left: 0;
+    width: 100%;
+    height: 140%;
+    object-fit: cover;
+    will-change: transform;
+}

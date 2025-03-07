@@ -1,0 +1,566 @@
+/* ==========================================================================
+   CLIX HOUSE - Contact Page Styles
+   A choreographed system of form elements that guide the user through
+   a considered interaction sequence, emphasizing clarity and feedback.
+   ========================================================================== */
+
+/* Contact Form Section */
+.contact-form-section {
+    padding: var(--spacing-xl) 0;
+    position: relative;
+}
+
+.contact-card {
+    background-color: var(--paper);
+    border: 1px solid var(--subtle-accent);
+    padding: var(--spacing-xl);
+    transition: background-color 1s var(--easing-smooth),
+                transform 0.8s var(--easing-bounce),
+                box-shadow 0.8s var(--easing-smooth);
+}
+
+body.dark-mode .contact-card {
+    background-color: var(--paper-aged);
+    border-color: rgba(255, 255, 255, 0.05);
+}
+
+.contact-card:hover {
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.05);
+    transform: translateY(-5px);
+}
+
+body.dark-mode .contact-card:hover {
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
+}
+
+.contact-form-wrapper {
+    position: relative;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+/* Form Styles with Considered Animation Sequence */
+.contact-form {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: var(--spacing-m);
+    animation: formReveal 0.5s var(--easing-smooth) forwards;
+}
+
+@keyframes formReveal {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.form-group {
+    position: relative;
+    margin-bottom: var(--spacing-m);
+}
+
+.form-group.full {
+    grid-column: span 2;
+}
+
+.form-label {
+    display: block;
+    font-family: var(--mono);
+    font-size: var(--size-s);
+    margin-bottom: var(--spacing-xs);
+    color: var(--ink);
+    opacity: 0.7;
+    transition: opacity 0.3s var(--easing-smooth),
+                transform 0.3s var(--easing-smooth);
+}
+
+.form-input {
+    width: 100%;
+    padding: var(--spacing-s) 0;
+    font-family: var(--mono);
+    font-size: var(--size-m);
+    background-color: transparent;
+    border: none;
+    color: var(--ink);
+    transition: border-color var(--timing-quick) var(--easing-smooth);
+    -webkit-appearance: none;
+    border-radius: 0;
+}
+
+.form-input:focus {
+    outline: none;
+}
+
+.form-input:focus + .input-line {
+    transform: scaleX(1);
+}
+
+.form-input:focus ~ .form-label,
+.form-input:not(:placeholder-shown) ~ .form-label {
+    opacity: 1;
+    transform: translateY(-20px);
+}
+
+.input-line {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 1px;
+    background-color: var(--ink);
+    transform-origin: left;
+    transform: scaleX(0.15);
+    transition: transform 0.4s var(--easing-bounce);
+}
+
+.form-textarea {
+    height: 120px;
+    resize: vertical;
+    min-height: 120px;
+    line-height: 1.5;
+}
+
+/* Custom select styling */
+.form-select {
+    appearance: none;
+    width: 100%;
+    padding: var(--spacing-s) 0;
+    font-family: var(--mono);
+    font-size: var(--size-m);
+    background-color: transparent;
+    border: none;
+    color: var(--ink);
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24' fill='none' stroke='%23000000' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpolyline points='6 9 12 15 18 9'%3E%3C/polyline%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+    background-position: right center;
+    background-size: 16px;
+    cursor: pointer;
+}
+
+body.dark-mode .form-select {
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24' fill='none' stroke='%23ffffff' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpolyline points='6 9 12 15 18 9'%3E%3C/polyline%3E%3C/svg%3E");
+}
+
+.form-select:focus {
+    outline: none;
+}
+
+/* Checkbox grid and custom styling */
+.checkbox-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: var(--spacing-s);
+    margin-top: var(--spacing-s);
+}
+
+.checkbox-item {
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+.form-checkbox {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+    height: 0;
+    width: 0;
+}
+
+.checkbox-label {
+    position: relative;
+    padding-left: 35px;
+    cursor: pointer;
+    font-family: var(--mono);
+    font-size: var(--size-s);
+    user-select: none;
+    display: flex;
+    align-items: center;
+}
+
+.checkbox-label:before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 20px;
+    height: 20px;
+    border: 1px solid var(--ink);
+    background-color: transparent;
+    transition: background-color var(--timing-quick) var(--easing-smooth),
+                border-color var(--timing-quick) var(--easing-smooth);
+}
+
+.form-checkbox:checked + .checkbox-label:before {
+    background-color: var(--ink);
+}
+
+.form-checkbox:checked + .checkbox-label:after {
+    content: '';
+    position: absolute;
+    left: 7px;
+    top: calc(50% - 2px);
+    width: 6px;
+    height: 10px;
+    border: solid var(--paper);
+    border-width: 0 2px 2px 0;
+    transform: translateY(-50%) rotate(45deg);
+}
+
+/* Submit button styling */
+.form-submit-group {
+    margin-top: var(--spacing-m);
+}
+
+.form-submit {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 16px 32px;
+    font-family: var(--mono);
+    font-size: var(--size-m);
+    font-weight: 400;
+    color: var(--paper);
+    background-color: var(--ink);
+    border: none;
+    cursor: pointer;
+    text-decoration: none;
+    position: relative;
+    overflow: hidden;
+    transition: transform var(--timing-medium) var(--easing-bounce),
+                background-color var(--timing-quick) var(--easing-smooth);
+}
+
+.form-submit::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(255, 255, 255, 0.1);
+    transform: translateX(-100%);
+    transition: transform var(--timing-medium) var(--easing-smooth);
+}
+
+.form-submit:hover {
+    transform: translateY(-2px);
+}
+
+.form-submit:hover::before {
+    transform: translateX(0);
+}
+
+.submit-text {
+    margin-right: var(--spacing-s);
+    position: relative;
+    z-index: 1;
+}
+
+.submit-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    z-index: 1;
+    transition: transform var(--timing-medium) var(--easing-bounce);
+}
+
+.submit-icon svg {
+    width: 18px;
+    height: 18px;
+}
+
+.form-submit:hover .submit-icon {
+    transform: translateX(4px);
+}
+
+body.dark-mode .form-submit {
+    color: var(--ink);
+    background-color: var(--paper);
+}
+
+body.dark-mode .form-submit::before {
+    background-color: rgba(0, 0, 0, 0.1);
+}
+
+/* Form Success Message */
+.form-success {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    background-color: var(--paper);
+    padding: var(--spacing-xl);
+    opacity: 0;
+    visibility: hidden;
+    transform: scale(0.9);
+    transition: opacity 0.5s var(--easing-smooth),
+                visibility 0.5s var(--easing-smooth),
+                transform 0.5s var(--easing-bounce),
+                background-color 1s var(--easing-smooth);
+}
+
+body.dark-mode .form-success {
+    background-color: var(--paper-aged);
+}
+
+.form-success.active {
+    opacity: 1;
+    visibility: visible;
+    transform: scale(1);
+}
+
+.success-icon {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    background-color: rgba(0, 200, 83, 0.1);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: var(--spacing-m);
+}
+
+.success-icon svg {
+    width: 40px;
+    height: 40px;
+    stroke: #00c853;
+}
+
+.success-title {
+    font-family: var(--serif);
+    font-size: var(--size-xl);
+    margin-bottom: var(--spacing-m);
+}
+
+.success-text {
+    font-family: var(--mono);
+    font-size: var(--size-m);
+    margin-bottom: var(--spacing-l);
+    max-width: 600px;
+}
+
+/* Contact Info Section */
+.contact-info-section {
+    padding: var(--spacing-xl) 0;
+}
+
+.contact-info-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: var(--spacing-l);
+}
+
+.contact-info-card {
+    padding: var(--spacing-l);
+    background-color: var(--paper);
+    border: 1px solid var(--subtle-accent);
+    text-align: center;
+    transition: transform var(--timing-medium) var(--easing-bounce),
+                box-shadow var(--timing-medium) var(--easing-smooth),
+                background-color 1s var(--easing-smooth);
+}
+
+body.dark-mode .contact-info-card {
+    background-color: var(--paper-aged);
+    border-color: rgba(255, 255, 255, 0.05);
+}
+
+.contact-info-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.05);
+}
+
+body.dark-mode .contact-info-card:hover {
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
+}
+
+.info-icon {
+    width: 48px;
+    height: 48px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto var(--spacing-m);
+}
+
+.info-icon svg {
+    width: 100%;
+    height: 100%;
+    color: var(--ink);
+    opacity: 0.8;
+}
+
+.info-title {
+    font-family: var(--serif);
+    font-size: var(--size-l);
+    margin-bottom: var(--spacing-s);
+}
+
+.info-text {
+    font-family: var(--mono);
+    font-size: var(--size-m);
+    line-height: 1.6;
+}
+
+.info-text a {
+    color: var(--ink);
+    text-decoration: none;
+    position: relative;
+    display: inline-block;
+    padding-bottom: 2px;
+}
+
+.info-text a::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 1px;
+    background-color: var(--ink);
+    transform-origin: right;
+    transform: scaleX(0);
+    transition: transform var(--timing-medium) var(--easing-bounce);
+}
+
+.info-text a:hover::after {
+    transform-origin: left;
+    transform: scaleX(1);
+}
+
+.social-links {
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-xs);
+}
+
+.social-link {
+    color: var(--ink);
+    text-decoration: none;
+    position: relative;
+    display: inline-block;
+    padding-bottom: 2px;
+    font-family: var(--mono);
+    font-size: var(--size-m);
+}
+
+.social-link::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 1px;
+    background-color: var(--ink);
+    transform-origin: right;
+    transform: scaleX(0);
+    transition: transform var(--timing-medium) var(--easing-bounce);
+}
+
+.social-link:hover::after {
+    transform-origin: left;
+    transform: scaleX(1);
+}
+
+/* Studio Hours Section */
+.studio-hours-section {
+    padding: var(--spacing-xl) 0;
+}
+
+.studio-hours-card {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: var(--spacing-xl);
+    background-color: var(--subtle-shade);
+    text-align: center;
+    transition: background-color 1s var(--easing-smooth);
+}
+
+body.dark-mode .studio-hours-card {
+    background-color: rgba(255, 255, 255, 0.03);
+}
+
+.studio-hours-title {
+    font-size: var(--size-xl);
+    margin-bottom: var(--spacing-l);
+}
+
+.hours-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: var(--spacing-l);
+    margin-bottom: var(--spacing-l);
+}
+
+.hours-item {
+    text-align: center;
+}
+
+.day {
+    font-family: var(--mono);
+    font-size: var(--size-m);
+    font-weight: 600;
+    margin-bottom: var(--spacing-xs);
+}
+
+.time {
+    font-family: var(--mono);
+    font-size: var(--size-m);
+}
+
+.response-time {
+    font-family: var(--mono);
+    font-size: var(--size-s);
+    opacity: 0.7;
+}
+
+/* Responsive Styles */
+@media (max-width: 1024px) {
+    .contact-info-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    
+    .hours-grid {
+        grid-template-columns: 1fr;
+        gap: var(--spacing-m);
+    }
+}
+
+@media (max-width: 768px) {
+    .contact-card {
+        padding: var(--spacing-l);
+    }
+    
+    .contact-form {
+        grid-template-columns: 1fr;
+    }
+    
+    .form-group.full {
+        grid-column: span 1;
+    }
+    
+    .checkbox-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .contact-info-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .studio-hours-title {
+        font-size: var(--size-l);
+    }
+}
